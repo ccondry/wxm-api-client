@@ -5,6 +5,17 @@
   "main": "src/index.js",
   "author": "Coty Condry <ccondry@cisco.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ccondry/wxm-api-client.git"
+  },
+  "keywords": [
+    "wxm",
+    "cisco",
+    "webex",
+    "experience",
+    "manager"
+  ],
   "scripts": {
     "start": "node src/index.js",
     "test": "node test/index.js"
