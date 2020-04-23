@@ -1,6 +1,6 @@
 {
   "name": "wxm-api-client",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Node.js library for Cisco Webex Experience Manager REST APIs",
   "main": "src/index.js",
   "author": "Coty Condry <ccondry@cisco.com>",
