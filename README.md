@@ -1,4 +1,9 @@
+# wxm-api-client
+### Node.js library for Cisco Webex Experience Manager REST APIs
 
+This library provides 2 methods currently - listUsers and createUser. 
+
+## Example usage
 ```js
 const lib = require('wxm-api-client')
 // replace these values with your API username and password
