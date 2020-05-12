@@ -171,4 +171,70 @@ module.exports = class {
       throw e
     }
   }
+  
+  // list preferences
+  async listPreferences () {
+    // make sure we have a valid access token
+    await this.checkAccessToken()
+    // request URL
+    const url = this.url + '/Preference'
+    // request options
+    const options = {
+      headers: {
+        Authorization: 'Bearer ' + this.accessToken
+      }
+    }
+    // start the request and return the promise
+    try {
+      // wait for the request to finish
+      const response = await fetch(url, options)
+      // parse JSON response
+      const json = await response.json()
+      // check response status
+      if (response.ok) {
+        // return JSON response
+        return json
+      } else {
+        // status not OK
+        throw Error(`${response.status} ${response.statusText} - ${json.message}`)
+      }
+    } catch (e) {
+      // just rethrow any errors
+      throw e
+    }
+  }
+
+  // set preferences
+  async setPreferences (body) {
+    // make sure we have a valid access token
+    await this.checkAccessToken()
+    // request URL
+    const url = this.url + '/Preference'
+    // request options
+    const options = {
+      method: 'POST',
+      headers: {
+        Authorization: 'Bearer ' + this.accessToken,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(body)
+    }
+    try {
+      // wait for the request to finish
+      const response = await fetch(url, options)
+      // parse JSON response
+      const json = await response.json()
+      // check response status
+      if (response.ok) {
+        // return JSON response
+        return json
+      } else {
+        // status not OK
+        throw Error(`${response.status} ${response.statusText} - ${json.message}`)
+      }
+    } catch (e) {
+      // just rethrow any errors
+      throw e
+    }
+  }
 }
