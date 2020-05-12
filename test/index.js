@@ -28,11 +28,15 @@ client.listUsers()
 
 // create a user
 // note: dcwxmbank prefix will be added to username on cloud server side
-client.createUser({
-  name: 'Rick Barrows 0325',
-  username: 'rbarrows0325',
-  email: 'ccondry@cisco.com',
-  password: 'dcloud@123'
-})
-.then(body => console.log(body))
-.catch(e => console.log(e))
+// client.createUser({
+//   name: 'Rick Barrows 0325',
+//   username: 'rbarrows0325',
+//   email: 'ccondry@cisco.com',
+//   password: 'dcloud@123'
+// })
+// .then(body => console.log(body))
+// .catch(e => console.log(e))
+
+// client.getAuthToken()
+// .then(body => console.log(body))
+// .catch(e => console.log(e))
