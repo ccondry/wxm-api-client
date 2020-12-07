@@ -7,7 +7,9 @@ module.exports = function ({
   enterpriseRole = 'Contact Center - Agent',
   enterpriseRoleId = '5e9964534e67f10e4873af46',
   department = 'Contact Center',
-  departmentId = '5e9964764e67f10e4873af47'
+  departmentId = '5e9964764e67f10e4873af47',
+  isEmailVerified = false,
+  highPrecisionMode = true
 }) {
   return {
     'userName': username,
@@ -48,12 +50,12 @@ module.exports = function ({
     },
     'myViews': null,
     password,
-    'isEmailVerified': true,
+    isEmailVerified,
     'isMobilePhoneVerified': false,
     'promptPasswordChange': false,
     'exemptSSOLock': false,
     'timeZoneOffset': 0,
-    'highPrecisionMode': false,
+    highPrecisionMode,
     'alwaysEnforceTwoFactor': false,
     'restrictPIIData': false,
     'allowRestrictedDataUntil': null
